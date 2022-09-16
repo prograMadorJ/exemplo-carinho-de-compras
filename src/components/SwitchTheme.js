@@ -33,6 +33,7 @@ const SwitchThemeContainer = styled.div`
   cursor: pointer;
   padding: 3px 4px;
   border-radius: 12px;
+  transition: all 0.6s ease-in-out;
 
   i {
     color: var(--btnSwitchTheme);
@@ -57,7 +58,7 @@ const SwitchThemeContainer = styled.div`
 
 const Label = styled.small`
 
-  transition: width 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   margin-left: 3px;
   width: 0px;
   height: 15px;
