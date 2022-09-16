@@ -269,7 +269,7 @@ const CartEmptyImg = styled.div`
   height: 100px;
 
   filter: hue-rotate(226deg) grayscale(1) var(--filterDarkImg);
-
+  
   margin: 20px 0px 25px; 0;
 
 `;

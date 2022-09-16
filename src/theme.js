@@ -45,6 +45,8 @@ const themes = {
  --btnRedHover: #DD2C00;
 --btnTextWhite: #FAFAFAcc;
 
+--filterDarkImg: invert(0);
+
 --btnSwitchTheme: #363537;
 
      --fabIcon: #212121;
