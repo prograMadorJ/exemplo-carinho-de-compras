@@ -15,7 +15,7 @@ export default function SwitchTheme({ stateTheme }) {
     stateTheme.setTheme(isLight ? dark : light);
   }
   return (
-    <SwitchThemeContainer className="teste" onClick={handleToggleTheme}>
+    <SwitchThemeContainer onClick={handleToggleTheme}>
       <FlexGroup align="center">
         <Icon className="fa-solid fa-circle-half-stroke" />
         <Label>
