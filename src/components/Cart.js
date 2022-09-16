@@ -15,6 +15,7 @@ export default function Cart() {
 
   const states = {
     _hasItems: cart.items.length > 0,
+    'data-added': false,
   };
 
   function handleTogglePanel() {
@@ -35,7 +36,7 @@ export default function Cart() {
             onClear={cart.clear}
             onClose={handleTogglePanel}
           />
-          <CartItems {...{ cart }} />
+          <CartItems {...{ cart, states }} />
           <CartTotalsToCheckOut {...{ cart }} />
         </ContainerPanel>
       </CartPanel>
@@ -209,12 +210,12 @@ const Title = styled.div`
 /**
  * Cart Items
  */
-const CartItems = ({ cart }) => {
+const CartItems = ({ cart, states }) => {
   return (
     <CartItemsContainer>
       <FlexGroup direction="column">
         {cart.items.map((item, i) => (
-          <CartItem {...{ item, cart }} key={'cart-item-' + i} />
+          <CartItem {...{ item, cart, states }} key={'cart-item-' + i} />
         ))}
         <CartEmpty isEmpty={cart.items.length === 0} />
       </FlexGroup>
@@ -277,12 +278,12 @@ const CartEmptyImg = styled.div`
 /**
  * Cart Item
  */
-const CartItem = ({ item, cart }) => {
+const CartItem = ({ item, cart, states }) => {
   const CounterItemsProps = {
     count: item?.count,
     onUp: () => cart.add(item, item.states()),
     onDown: () => cart.remove(item, item.states()),
-    states: { ...item.states(), _showHasAdded: true },
+    states: { ...states, _showHasAdded: true },
   };
 
   return (
