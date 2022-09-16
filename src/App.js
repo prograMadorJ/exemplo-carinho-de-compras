@@ -28,7 +28,7 @@ export default function App() {
           <Trans>Shop</Trans>
         </Title>
         <Subtitle>
-          <Trans>choose items and add in the cart</Trans>
+          <Trans>choose items and add to cart</Trans>
         </Subtitle>
         <ProductList {...{ products }} />
       </AppContainer>

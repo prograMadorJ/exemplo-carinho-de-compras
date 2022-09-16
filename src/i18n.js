@@ -5,8 +5,7 @@ const resources = {
   ptBr: {
     translation: {
       Shop: 'Loja',
-      'choose items and add in the cart':
-        'escolha itens e adicione no carrinho',
+      'choose items and add to cart': 'escolha itens e adicione no carrinho',
       'add to cart': 'adicione ao carrinho',
       language: 'idioma',
       Cart: 'Carrinho',
