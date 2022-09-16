@@ -15,7 +15,7 @@ const resources = {
       quant: 'qtd.',
       price: 'preço',
       clear: 'limpar',
-      'Cart is empity, add some items.':
+      'Cart is empty, add some items.':
         'O carrinho está vazio, adicione alguns itens.',
       Items: 'Itens',
       Quant: 'Qtd.',

@@ -216,7 +216,7 @@ const CartItems = ({ cart }) => {
         {cart.items.map((item, i) => (
           <CartItem {...{ item, cart }} key={'cart-item-' + i} />
         ))}
-        <CartEmpity isEmpty={cart.items.length === 0} />
+        <CartEmpty isEmpty={cart.items.length === 0} />
       </FlexGroup>
     </CartItemsContainer>
   );
@@ -235,20 +235,20 @@ const CartItemsContainer = styled.div`
 /**
  * CartEmpty
  */
-const CartEmpity = (props) =>
+const CartEmpty = (props) =>
   showIf(
     props.isEmpty,
-    <CartEmpityContainer>
+    <CartEmptyContainer>
       <FlexGroup justify="center" align="center" direction="column" fillHeight>
-        <CartEmpityImg />
+        <CartEmptyImg />
         <span>
-          <Trans>Cart is empity, add some items.</Trans>
+          <Trans>Cart is empty, add some items.</Trans>
         </span>
       </FlexGroup>
-    </CartEmpityContainer>
+    </CartEmptyContainer>
   );
 
-const CartEmpityContainer = styled.div`
+const CartEmptyContainer = styled.div`
   width: 100%;
   height: 100%;
   span {
@@ -258,7 +258,7 @@ const CartEmpityContainer = styled.div`
   }
 `;
 
-const CartEmpityImg = styled.div`
+const CartEmptyImg = styled.div`
 
   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoaV_TPi9Wpd--kOSujkbxbBBhLyKGvvVGTg&usqp=CAU');
 
