@@ -45,7 +45,7 @@ export default function Cart() {
 }
 
 const CartContainer = styled.div`
-  position: fixed;
+  position: absolute;
   bottom: 40px;
   right: 20px;
 
@@ -66,10 +66,10 @@ const CartContainer = styled.div`
     }
   }
 
-  &:active {
+  &[data-open='false']:active {
     box-shadow: 0 0 10px -4px #999;
     i.fab-open {
-      scale: 0.9;
+      font-size: 30px;
     }
   }
 
