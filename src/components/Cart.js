@@ -45,7 +45,7 @@ export default function Cart() {
 }
 
 const CartContainer = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   right: 20px;
 
